@@ -12,10 +12,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #0a0a0b;
   color: #e1e1e1;
   font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Glassmorphic card style */
@@ -80,10 +86,18 @@ html {
 .pill-button {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 9999px;
-  padding: 0.625rem 1.5rem;
-  font-size: 0.875rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8125rem;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .pill-button {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
 }
 
 .pill-button:hover {
@@ -91,19 +105,36 @@ html {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
+/* Active/tap state for touch devices */
+.pill-button:active {
+  transform: scale(0.97);
+}
+
 .pill-button-primary {
   border: 1px solid rgba(255, 106, 0, 0.3);
   border-radius: 9999px;
-  padding: 0.625rem 1.5rem;
-  font-size: 0.875rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8125rem;
   transition: all 0.3s ease;
   background: rgba(255, 106, 0, 0.15);
   color: #ff8c3a;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .pill-button-primary {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
 }
 
 .pill-button-primary:hover {
   background: rgba(255, 106, 0, 0.25);
   border-color: rgba(255, 106, 0, 0.5);
+}
+
+.pill-button-primary:active {
+  transform: scale(0.97);
 }
 
 /* Focus-visible for keyboard accessibility */
@@ -130,4 +161,23 @@ button:focus-visible {
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* Safe area for notched phones */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Prevent tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Better touch targets */
+@media (hover: none) and (pointer: coarse) {
+  .glass-card {
+    min-height: 44px;
+  }
 }

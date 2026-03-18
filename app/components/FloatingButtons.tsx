@@ -18,22 +18,22 @@ function WhatsAppIcon({ size = 20 }: { size?: number }) {
 
 export default function FloatingButtons() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2.5 sm:gap-3 safe-bottom">
       <a
         href="https://wa.me/31627586965"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group flex items-center justify-center w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/25 hover:scale-110 hover:shadow-[#25D366]/40 transition-all duration-300"
+        className="group flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/25 hover:scale-110 active:scale-95 hover:shadow-[#25D366]/40 transition-all duration-300"
       >
-        <WhatsAppIcon size={22} />
+        <WhatsAppIcon size={20} />
       </a>
       <a
         href="tel:+31627586965"
         aria-label="Call us"
-        className="group flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/25 hover:scale-110 hover:shadow-orange-500/40 transition-all duration-300"
+        className="group flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/25 hover:scale-110 active:scale-95 hover:shadow-orange-500/40 transition-all duration-300"
       >
-        <Phone size={20} />
+        <Phone size={18} />
       </a>
     </div>
   );

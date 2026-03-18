@@ -28,7 +28,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     <div>
       {/* Hero image */}
       <section className="relative">
-        <div className="w-full aspect-[16/7] md:aspect-[16/6] overflow-hidden">
+        <div className="w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/7] lg:aspect-[16/6] overflow-hidden">
           <img
             src={project.image}
             alt={project.name}
@@ -38,27 +38,27 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         </div>
 
         {/* Back button */}
-        <div className="absolute top-24 md:top-28 left-0 right-0">
-          <div className="max-w-7xl mx-auto px-6">
+        <div className="absolute top-20 sm:top-24 md:top-28 left-0 right-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10"
+              className="inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-400 hover:text-white transition-colors bg-black/30 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 border border-white/10"
             >
-              <ArrowLeft size={14} /> Back to Portfolio
+              <ArrowLeft size={12} /> Back
             </Link>
           </div>
         </div>
 
         {/* Title overlay */}
         <div className="absolute bottom-0 left-0 right-0">
-          <div className="max-w-7xl mx-auto px-6 pb-8 md:pb-12">
-            <span className="text-xs uppercase tracking-widest text-orange-400/80 mb-2 block">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-6 sm:pb-8 md:pb-12">
+            <span className="text-[10px] sm:text-xs uppercase tracking-widest text-orange-400/80 mb-1.5 sm:mb-2 block">
               {project.category}
             </span>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-1.5 sm:mb-2">
               {project.name}
             </h1>
-            <div className="flex flex-wrap items-center gap-3 md:gap-4 text-sm text-gray-400">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 text-xs sm:text-sm text-gray-400">
               <span>{project.client}</span>
               <span className="w-1 h-1 rounded-full bg-gray-600" />
               <span>{project.year}</span>
@@ -70,21 +70,21 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       </section>
 
       {/* Overview */}
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div className="grid md:grid-cols-3 gap-10 md:gap-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-20">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-10 md:gap-16">
           <div className="md:col-span-2">
-            <h2 className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-4">Overview</h2>
-            <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+            <h2 className="text-xs sm:text-sm uppercase tracking-widest text-gray-500 font-medium mb-3 sm:mb-4">Overview</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
               {project.fullDescription}
             </p>
           </div>
           <div>
-            <h2 className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-4">Tech Stack</h2>
-            <div className="flex flex-wrap gap-2">
+            <h2 className="text-xs sm:text-sm uppercase tracking-widest text-gray-500 font-medium mb-3 sm:mb-4">Tech Stack</h2>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-3 py-1.5 rounded-full bg-white/5 text-gray-300 border border-white/10"
+                  className="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/5 text-gray-300 border border-white/10"
                 >
                   {t}
                 </span>
@@ -96,23 +96,23 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
       {/* Challenge & Solution */}
       <section className="border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-20">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 md:gap-16">
             <div>
-              <div className="w-10 h-10 rounded-xl bg-orange-400/10 flex items-center justify-center mb-4">
-                <span className="text-orange-400 font-bold text-sm">01</span>
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-orange-400/10 flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-orange-400 font-bold text-xs sm:text-sm">01</span>
               </div>
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-4">The Challenge</h2>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4">The Challenge</h2>
+              <p className="text-xs sm:text-sm md:text-base text-gray-400 leading-relaxed">
                 {project.challenge}
               </p>
             </div>
             <div>
-              <div className="w-10 h-10 rounded-xl bg-orange-400/10 flex items-center justify-center mb-4">
-                <span className="text-orange-400 font-bold text-sm">02</span>
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-orange-400/10 flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-orange-400 font-bold text-xs sm:text-sm">02</span>
               </div>
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-4">The Solution</h2>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4">The Solution</h2>
+              <p className="text-xs sm:text-sm md:text-base text-gray-400 leading-relaxed">
                 {project.solution}
               </p>
             </div>
@@ -121,13 +121,13 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       </section>
 
       {/* Results */}
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <h2 className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-8">Key Results</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-20">
+        <h2 className="text-xs sm:text-sm uppercase tracking-widest text-gray-500 font-medium mb-6 sm:mb-8">Key Results</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {project.results.map((result) => (
-            <div key={result} className="glass-card rounded-2xl p-5 md:p-6 text-center">
-              <CheckCircle size={18} className="text-orange-400 mx-auto mb-3" />
-              <p className="text-sm md:text-base text-white font-medium">{result}</p>
+            <div key={result} className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 text-center">
+              <CheckCircle size={16} className="text-orange-400 mx-auto mb-2 sm:mb-3" />
+              <p className="text-xs sm:text-sm md:text-base text-white font-medium">{result}</p>
             </div>
           ))}
         </div>
@@ -135,20 +135,20 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
       {/* Prev / Next navigation */}
       <section className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-16">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {prevProject ? (
               <Link
                 href={`/portfolio/${prevProject.id}`}
-                className="glass-card rounded-2xl p-5 md:p-6 group hover:border-white/15 transition-all"
+                className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 group hover:border-white/15 transition-all"
               >
-                <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-                  <ArrowLeft size={12} /> Previous
+                <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500 mb-1.5 sm:mb-2">
+                  <ArrowLeft size={10} /> Previous
                 </div>
-                <p className="text-sm md:text-base text-white font-medium group-hover:text-orange-400 transition-colors truncate">
+                <p className="text-xs sm:text-sm md:text-base text-white font-medium group-hover:text-orange-400 transition-colors truncate">
                   {prevProject.name}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">{prevProject.client}</p>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-1">{prevProject.client}</p>
               </Link>
             ) : (
               <div />
@@ -156,15 +156,15 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             {nextProject ? (
               <Link
                 href={`/portfolio/${nextProject.id}`}
-                className="glass-card rounded-2xl p-5 md:p-6 group hover:border-white/15 transition-all text-right"
+                className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 group hover:border-white/15 transition-all text-right"
               >
-                <div className="flex items-center justify-end gap-2 text-sm text-gray-500 mb-2">
-                  Next <ArrowRight size={12} />
+                <div className="flex items-center justify-end gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500 mb-1.5 sm:mb-2">
+                  Next <ArrowRight size={10} />
                 </div>
-                <p className="text-sm md:text-base text-white font-medium group-hover:text-orange-400 transition-colors truncate">
+                <p className="text-xs sm:text-sm md:text-base text-white font-medium group-hover:text-orange-400 transition-colors truncate">
                   {nextProject.name}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">{nextProject.client}</p>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-1">{nextProject.client}</p>
               </Link>
             ) : (
               <div />
@@ -175,11 +175,11 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
       {/* CTA */}
       <section className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
             Want something similar?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-md mx-auto text-sm md:text-base">
+          <p className="text-gray-400 mb-6 sm:mb-8 max-w-md mx-auto text-xs sm:text-sm md:text-base">
             Let's discuss how we can build the right solution for your business.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
