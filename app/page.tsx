@@ -95,8 +95,8 @@ export default function Home() {
               <span className="text-white font-semibold">apps</span>,{" "}
               <span className="text-white font-semibold">online stores</span>,{" "}
               <span className="text-white font-semibold">social media</span>,{" "}
-              <span className="text-white font-semibold">logos</span>, and keep it all{" "}
-              <span className="text-white font-semibold">safe from hackers</span>.
+              <span className="text-white font-semibold">logos</span>, and{" "}
+              <span className="text-white font-semibold">cybersecurity</span>.
             </p>
 
             <p className="text-gray-500 mt-3 sm:mt-4 max-w-lg text-sm md:text-base">
