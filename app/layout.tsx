@@ -63,7 +63,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <link rel="canonical" href="https://megokruto.com" />
       </head>
       <body className="bg-[#0a0a0b] text-gray-200 antialiased min-h-screen">

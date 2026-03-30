@@ -61,7 +61,7 @@ export default function About() {
       </section>
 
       {/* Numbers strip */}
-      <section className="border-y border-white/5">
+      {/* <section className="border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 text-center">
             {[
@@ -81,7 +81,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Founder */}
       <section>
@@ -103,7 +103,7 @@ export default function About() {
                 Focused on building things that work well, look good, are fast,
                 and don't break. That's the standard for every project.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a href="/cv" className="pill-button-primary text-center">
                   View Resume
                 </a>
@@ -114,7 +114,7 @@ export default function About() {
                 >
                   Download CV
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className="md:col-span-2">
               <div className="glass-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 space-y-3 sm:space-y-4 md:space-y-5">
