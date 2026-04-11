@@ -21,7 +21,9 @@ export default function Navbar() {
     } else {
       document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   return (
@@ -34,7 +36,10 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4">
         {/* Logo */}
-        <Link href="/" className="font-bold text-lg sm:text-xl tracking-wider text-white">
+        <Link
+          href="/"
+          className="font-bold text-lg sm:text-xl tracking-wider text-white"
+        >
           MEGOKRUTO
         </Link>
 
@@ -115,7 +120,12 @@ export default function Navbar() {
           ))}
           <div className="flex items-center gap-2 text-gray-500 text-sm pt-3">
             <Phone size={14} />
-            <a href="tel:+31627586965" className="hover:text-white transition-colors">+31 6 27 58 69 65</a>
+            <a
+              href="tel:+31631237307"
+              className="hover:text-white transition-colors"
+            >
+              +31 6 27 58 69 65
+            </a>
           </div>
         </div>
       </div>

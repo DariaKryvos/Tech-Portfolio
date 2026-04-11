@@ -92,7 +92,7 @@ export default function RootLayout({
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+31627586965",
+                telephone: "+31631237307",
                 email: "megokruto@gmail.com",
                 contactType: "customer service",
               },

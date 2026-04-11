@@ -20,7 +20,7 @@ export default function FloatingButtons() {
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2.5 sm:gap-3 safe-bottom">
       <a
-        href="https://wa.me/31627586965"
+        href="https://wa.me/31631237307"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
@@ -29,7 +29,7 @@ export default function FloatingButtons() {
         <WhatsAppIcon size={20} />
       </a>
       <a
-        href="tel:+31627586965"
+        href="tel:+31631237307"
         aria-label="Call us"
         className="group flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/25 hover:scale-110 active:scale-95 hover:shadow-orange-500/40 transition-all duration-300"
       >

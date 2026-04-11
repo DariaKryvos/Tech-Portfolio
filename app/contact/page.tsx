@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Clock, ArrowRight, MessageCircle } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  ArrowRight,
+  MessageCircle,
+} from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,7 +29,8 @@ export default function Contact() {
           <span className="text-gray-500">touch.</span>
         </h1>
         <p className="text-gray-400 max-w-lg text-sm md:text-base leading-relaxed">
-          Need a website, app, or anything else? Send us a message and we'll get back to you fast.
+          Need a website, app, or anything else? Send us a message and we'll get
+          back to you fast.
         </p>
       </section>
 
@@ -34,42 +42,74 @@ export default function Contact() {
             className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 group hover:border-orange-400/20"
           >
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-orange-400/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-orange-400/20 transition-colors">
-              <Mail size={16} className="text-orange-400 sm:w-[18px] sm:h-[18px]" strokeWidth={1.5} />
+              <Mail
+                size={16}
+                className="text-orange-400 sm:w-[18px] sm:h-[18px]"
+                strokeWidth={1.5}
+              />
             </div>
-            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">Email</h3>
-            <p className="text-[10px] sm:text-sm text-gray-400 break-all">megokruto@gmail.com</p>
+            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">
+              Email
+            </h3>
+            <p className="text-[10px] sm:text-sm text-gray-400 break-all">
+              megokruto@gmail.com
+            </p>
           </a>
 
           <a
-            href="tel:+31627586965"
+            href="tel:+31631237307"
             className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 group hover:border-orange-400/20"
           >
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-orange-400/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-orange-400/20 transition-colors">
-              <Phone size={16} className="text-orange-400 sm:w-[18px] sm:h-[18px]" strokeWidth={1.5} />
+              <Phone
+                size={16}
+                className="text-orange-400 sm:w-[18px] sm:h-[18px]"
+                strokeWidth={1.5}
+              />
             </div>
-            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">Phone</h3>
-            <p className="text-[10px] sm:text-sm text-gray-400">+31 6 27 58 69 65</p>
+            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">
+              Phone
+            </h3>
+            <p className="text-[10px] sm:text-sm text-gray-400">
+              +31 6 31 23 73 07
+            </p>
           </a>
 
           <a
-            href="https://wa.me/31627586965"
+            href="https://wa.me/31631237307"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 group hover:border-[#25D366]/20"
           >
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#25D366]/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-[#25D366]/20 transition-colors">
-              <MessageCircle size={16} className="text-[#25D366] sm:w-[18px] sm:h-[18px]" strokeWidth={1.5} />
+              <MessageCircle
+                size={16}
+                className="text-[#25D366] sm:w-[18px] sm:h-[18px]"
+                strokeWidth={1.5}
+              />
             </div>
-            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">WhatsApp</h3>
-            <p className="text-[10px] sm:text-sm text-gray-400">Quick response</p>
+            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">
+              WhatsApp
+            </h3>
+            <p className="text-[10px] sm:text-sm text-gray-400">
+              Quick response
+            </p>
           </a>
 
           <div className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white/5 flex items-center justify-center mb-3 sm:mb-4">
-              <MapPin size={16} className="text-gray-400 sm:w-[18px] sm:h-[18px]" strokeWidth={1.5} />
+              <MapPin
+                size={16}
+                className="text-gray-400 sm:w-[18px] sm:h-[18px]"
+                strokeWidth={1.5}
+              />
             </div>
-            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">Location</h3>
-            <p className="text-[10px] sm:text-sm text-gray-400">The Netherlands</p>
+            <h3 className="text-sm sm:text-base font-semibold text-white mb-0.5 sm:mb-1">
+              Location
+            </h3>
+            <p className="text-[10px] sm:text-sm text-gray-400">
+              The Netherlands
+            </p>
           </div>
         </div>
       </section>
@@ -103,10 +143,19 @@ export default function Contact() {
                 desc: "You get a clear plan with what we'll do, how long it takes, and what it costs. Say yes and we start.",
               },
             ].map((item) => (
-              <div key={item.step} className="glass-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 relative">
-                <div className="text-2xl sm:text-3xl font-bold text-white/10 mb-2 sm:mb-3">{item.step}</div>
-                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-1.5 sm:mb-2">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+              <div
+                key={item.step}
+                className="glass-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 relative"
+              >
+                <div className="text-2xl sm:text-3xl font-bold text-white/10 mb-2 sm:mb-3">
+                  {item.step}
+                </div>
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-1.5 sm:mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -147,19 +196,30 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-32 text-center">
           <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
             <Clock size={14} className="text-orange-400" />
-            <span className="text-xs sm:text-sm text-gray-400">Usually respond within 24 hours</span>
+            <span className="text-xs sm:text-sm text-gray-400">
+              Usually respond within 24 hours
+            </span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Ready when you are.
           </h2>
           <p className="text-gray-400 mb-6 sm:mb-8 max-w-md mx-auto text-xs sm:text-sm md:text-base">
-            No strings attached. Just tell us what you need and we'll figure it out together.
+            No strings attached. Just tell us what you need and we'll figure it
+            out together.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-            <a href="mailto:megokruto@gmail.com" className="pill-button-primary text-center inline-flex items-center justify-center gap-2">
+            <a
+              href="mailto:megokruto@gmail.com"
+              className="pill-button-primary text-center inline-flex items-center justify-center gap-2"
+            >
               Send an Email <ArrowRight size={14} />
             </a>
-            <a href="https://wa.me/31627586965" target="_blank" rel="noopener noreferrer" className="pill-button text-gray-400 text-center">
+            <a
+              href="https://wa.me/31631237307"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pill-button text-gray-400 text-center"
+            >
               WhatsApp Us
             </a>
           </div>
